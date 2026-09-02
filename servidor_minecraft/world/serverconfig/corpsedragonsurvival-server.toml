@@ -1,0 +1,6 @@
+#Animation IDs to use for corpse poses by body types
+#Animation will be frozen on first frame
+#Each line must consist of two parts: body type list and animation list
+#Lists are delimited by semicolon
+corpseAnimationMap = ["center;east;west;south;north:sleeping_on_side_left;sleeping_on_side_right;sleeping_on_back"]
+

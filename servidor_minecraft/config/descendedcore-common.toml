@@ -1,0 +1,6 @@
+
+[void]
+	#Chance for an eligible living entity to naturally become Void Touched.
+	#Range: 0.0 ~ 1.0
+	voidTouchedSpawnChance = 0.05
+

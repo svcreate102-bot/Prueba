@@ -1,0 +1,153 @@
+
+["Damage Indicate & Status - Core"]
+	#Determine how the Damage Indicator & Status will run of your instance.
+	#
+	#RESIST: Catches errors, preventing the game from closing if an error occurs. It does not provide any debugging data.
+	#
+	#ABORT: Closes the game immediately upon an error. The closure is immediate and provides debugging data.
+	#Allowed Values: RESIST, ABORT
+	indicatorAndStatusRunnerMethod = "RESIST"
+
+["Damage Indicate & Status - Particle Configs"]
+	#Lifespan of the text particle that will render the damage caused
+	#Time in ticks, recommended 40
+	#Range: 20 ~ 160
+	FadeTimeTextDamageRender = 40
+	#Size of the generated particles
+	#Range: 0.5 ~ 10.0
+	SizeTextDamageRender = 1.0
+	#Lifespan of the text particle that will render the current state of the entity or the type of
+	#damage caused by sources outside the player
+	#Time in ticks, recommended 20
+	#Range: 20 ~ 160
+	FadeTimeTextIndicatorRender = 20
+	#Size of the generated particles
+	#Range: 0.5 ~ 10.0
+	SizeTextIndicatorRender = 1.0
+
+["Damage Indicate & Status - Packed Target"]
+	#Who should see damage particles.
+	#OTHERS - Nearby players except yourself.
+	#SELF_AND_OTHERS - You and nearby players.
+	#EVERYONE - All players on the server.
+	#Allowed Values: OTHERS, SELF_AND_OTHERS, EVERYONE
+	netMethodForDamage = "OTHERS"
+	#Who should see status particles.
+	#OTHERS - Nearby players except yourself.
+	#SELF_AND_OTHERS - You and nearby players.
+	#EVERYONE - All entities on the server.
+	#Allowed Values: OTHERS, SELF_AND_OTHERS, EVERYONE
+	netMethodForStatus = "SELF_AND_OTHERS"
+
+["Caused Particles Parameters"]
+	# Base radius multiplier for caused particle cylinders. Controls how wide the effect spreads around the entity.
+	# CAUSED_BASE_RADIUS_MULTIPLIER
+	#  
+	# Defines the base radius of the cylindrical distribution (XZ plane).
+	#  
+	# Steps:
+	# 1) Project the entity hitbox onto XZ.
+	# 2) Enclose it in a square: s = max(widthX, depthZ).
+	# 3) Circumscribe a circle: r0 = (s / 2) * √2.
+	# 4) Apply multiplier: r = r0 * CAUSED_BASE_RADIUS_MULTIPLIER.
+	#  
+	# The resulting cylinder (radius r, height = entity Y)
+	# defines the base area where particles are distributed.
+	#  
+	# Heuristics:
+	# - < 1.0 → tighter than hitbox
+	# - = 1.0 → circumscribed circle
+	# - > 1.0 → extended outward
+	#  
+	# Recommended: 1.2
+	#
+	#Range: 0.5 ~ 3.0
+	causedBaseRadiusMultiplier = 1.0
+	#Vertical expansion of the caused particle beam.CAUSED_VERTICAL_SPREAD
+	#
+	# Expands the particle beam vertically.
+	#
+	# Without spread, particles would form a single line
+	# toward the attacker. Increasing this value transforms
+	# that line into a vertical surface, thickening the effect.
+	#
+	# Recommended: 0.8
+	#Range: 0.1 ~ 5.0
+	causedVerticalSpread = 0.8
+	#Horizontal expansion (XZ) of the caused particle beam. CAUSED_HORIZONTAL_SPREAD
+	#
+	# Controls horizontal deviation on the XZ plane
+	# relative to the beam direction.
+	#
+	# Higher values widen the beam left/right,
+	# increasing perceived impact width.
+	#
+	# Recommended: 1.0
+	#Range: 0.1 ~ 5.0
+	causedHorizontalSpread = 0.8
+
+["Uncaused Particles Parameters"]
+	#Global radius multiplier for uncaused particle distribution.
+	# Defines how large the probability cloud is. UNCAUSED_RATIO_MULTIPLIER
+	#
+	# Controls the overall size of the probability cloud where uncaused
+	# particles are generated.
+	#
+	# This value acts as a global radius multiplier applied to the base
+	# distribution area.
+	#
+	# Heuristics:
+	# - < 1.0 → tighter cluster
+	# - = 1.0 → default density
+	# - > 1.0 → wider dispersion
+	#
+	# Recommended: 1.0
+	#Range: 0.0 ~ 2.0
+	uncausedRatioMultiplier = 0.9
+	#Vertical dispersion factor for uncaused particles.
+	# Controls how far particles can spread upward and downward. UNCAUSED_VERTICAL_SPREAD
+	#
+	# Defines how far particles may deviate vertically (Y axis)
+	# from the center of the probability cloud.
+	#
+	# The spread is centered around Y/2 of the reference position,
+	# allowing symmetric upward and downward dispersion.
+	#
+	# Recommended: 0.3
+	#Range: 0.0 ~ 2.0
+	uncausedVerticalSpread = 0.5
+	#Horizontal dispersion factor (XZ plane) for uncaused particles. UNCAUSED_HORIZONTAL_SPREAD
+	#
+	# Controls horizontal dispersion on the XZ plane.
+	# Higher values allow particles to drift further
+	# from the center horizontally.
+	#
+	# Recommended: 1.0
+	#Range: 0.0 ~ 2.0
+	uncausedHorizontalSpread = 0.5
+
+["Damage Indicate & Status - Base Indicators"]
+	#Render text particles, in order to show the damage an entity receives
+	renderDamageIndicator = true
+	#Render text particles, in order to show that the entity is being 'Poisoned'
+	renderPoisonIndicator = true
+	#Render text particles, in order to show that the entity is being 'Withered'
+	renderWitherIndicator = true
+	#Render text particles, in order to show that the entity has received a combo, that is, several
+	#successive attacks in a certain time
+	renderComboIndicator = true
+	#Render text particles, in order to show that the entity has received a critical hit
+	renderCriticIndicator = true
+	#Render text particles, in order to demonstrate that the entity has received a puncture
+	RenderIndicatePunctures = true
+	#Render text particles, in order to demonstrate that the entity is burning or receiving fire-type damage
+	renderIndicateBurning = true
+
+["Damage Indicate & Status - Epic Fight Indicators "]
+	#Rendering text when doing an Air Slash
+	renderAirSlashText = true
+	#Rendering text when doing a Dash Attack
+	renderDashAttackText = true
+	#Rendering text when doing an Innate Skill
+	renderInnateAttackText = false
+

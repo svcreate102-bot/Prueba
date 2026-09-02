@@ -1,0 +1,146 @@
+
+["--Halo Settings--"]
+	#Extra healing received per halo tier (e.g. 0.05 = +5% per tier).
+	#Range: 0.0 ~ 10.0
+	haloHealingBonusPerTier = 0.05
+	#Extra damage vs undead per halo tier (e.g. 0.10 = +10% per tier).
+	#Range: 0.0 ~ 10.0
+	haloUndeadDamageBonusPerTier = 0.15
+	#Holy Spell Power added per halo tier when Iron's Spells 'n Spellbooks is installed (e.g. 0.03 = +3% per tier).
+	#Range: 0.0 ~ 10.0
+	haloHolySpellPowerPerTier = 0.03
+	#Base health added by halos (before tier scaling). Default: 2
+	#Range: 0.0 ~ 1024.0
+	haloExtraHealthBase = 2.0
+	#Multiplier for formula [(tier - 1) * tier] in the halo health calc. Default: 1.0
+	#Range: 0.0 ~ 1024.0
+	haloExtraHealthTermMultiplier = 1.0
+	#Base armor added by halos (before tier scaling). Default: 5
+	#Range: 0.0 ~ 1024.0
+	haloExtraArmorBase = 5.0
+	#Multiplier for formula [(tier - 1) * tier] in the halo armor calc. Default: 1.0
+	#Range: 0.0 ~ 1024.0
+	haloExtraArmorTermMultiplier = 1.0
+	#Global multiplier for all halo stat bonuses. < 1.0 = weaker halos, > 1.0 = stronger.
+	#Range: 0.0 ~ 100.0
+	haloEffectivenessMultiplier = 1.0
+
+["--Void Settings--"]
+	#Chance for Endermen to drop a Spatial Core on death. Default: 6%
+	#Range: 0.0 ~ 1.0
+	enderman_drop_chance = 0.06
+	#Chance for a Spatial Core to appear in End City chests. Default: 25%
+	#Range: 0.0 ~ 1.0
+	end_city_chest_chance = 0.25
+
+["--Ring Settings--"]
+	#The increase in attack speed by the Storm Ring (e.g. 0.20 = +20%).
+	#Range: 0.0 ~ 10.0
+	cloudRingATKSpeed_multi = 0.2
+	#The increase in movement speed by the Storm Ring (e.g. 0.30 = +30%).
+	#Range: 0.0 ~ 10.0
+	cloudRingMOVSpeed_multi = 0.3
+	#Global multiplier for all Ring bonuses. < 1.0 = weaker ring, > 1.0 = stronger.
+	#Range: 0.0 ~ 100.0
+	ringEffectivenessMultiplier = 1.0
+
+["--Necklace Settings--"]
+	#The increase in luck by the Messenger Pendant (e.g. 0.50 = +50%).
+	#Range: 0.0 ~ 10.0
+	messengerPendant_luckboost = 0.5
+	#Global multiplier for all Necklace bonuses. < 1.0 = weaker necklace, > 1.0 = stronger.
+	#Range: 0.0 ~ 100.0
+	necklaceEffectivenessMultiplier = 1.0
+
+["--Wing Settings--"]
+	#Speed multiplier for tier 2 wings.
+	#Range: 0.1 ~ 10.0
+	t2SpeedMultiplier = 1.0
+	#Speed multiplier for tier 3 wings.
+	#Range: 0.1 ~ 10.0
+	t3SpeedMultiplier = 1.75
+	#Global multiplier for angelic custom flight speed.
+	#Range: 0.1 ~ 10.0
+	globalFlightSpeedMultiplier = 1.0
+
+["--Sacred Writing Settings--"]
+	#Enable/disable Sacred Writings
+	enableSacredWritings = true
+	#List of blocked writ ids (e.g. "descendedangel:spawn_villagers")
+	blockedWritings = []
+	#Duration of weather writings
+	#Range: 20 ~ 1200000
+	weather_writ_dura = 24000
+	#Count of entities spawned
+	#Range: 1 ~ 50
+	entity_writ_spawn = 10
+	#Enable/disable structure spawning Sacred Writings
+	enableSpawnStructureWritings = true
+
+["--Halo Ability Settings--"]
+	#How far the Player can Teleport
+	#Range: 0 ~ 64
+	halo_teleport_range = 20
+	#Cooldown of Teleport ability
+	#Range: 20 ~ 1200000
+	halo_teleport_cooldown = 100
+	#Cooldown of Space Chest ability
+	#Range: 1 ~ 1200000
+	halo_space_chest_cooldown = 20
+	#How long the Field ability lasts
+	#Range: 20 ~ 1200000
+	halo_field_duration = 200
+	#The radius of the Field Ability (blocks)
+	#Range: 0.0 ~ 32.0
+	halo_field_range = 8.0
+	#Strength of slowness applied in field
+	#Range: 0 ~ 20
+	halo_field_slowness = 5
+	#Cooldown of Field ability
+	#Range: 20 ~ 1200000
+	halo_field_cooldown = 1200
+	#Cooldown of Accelerate ability
+	#Range: 20 ~ 1200000
+	halo_accelerate_cooldown = 200
+	#Duration of Accelerate ability
+	#Range: 20 ~ 1200000
+	halo_accelerate_duration = 100
+	#Level of Speed effect applied by Accelerate ability
+	#Range: 0 ~ 20
+	halo_accelerate_speed_amp = 5
+	#Cooldown of Fireball ability
+	#Range: 20 ~ 1200000
+	halo_fireball_cooldown = 200
+	#Cooldown of Gust ability
+	#Range: 20 ~ 1200000
+	halo_gust_cooldown = 200
+	#The radius of the Gust Ability (blocks)
+	#Range: 0.0 ~ 32.0
+	halo_gust_radius = 4.0
+	#The strength of the Gust Ability (blocks per tick)
+	#Range: 0.0 ~ 2.0
+	halo_gust_strength = 0.6
+	#Cooldown of Earth Wall ability
+	#Range: 20 ~ 1200000
+	halo_earth_wall_cooldown = 200
+	#Width of Earth Wall ability (blocks)
+	#Range: 0 ~ 32
+	halo_earth_wall_width = 3
+	#Height of Earth Wall ability (blocks)
+	#Range: 0 ~ 32
+	halo_earth_wall_height = 4
+	#Duration of Earth Wall ability
+	#Range: 20 ~ 1200000
+	halo_earth_wall_duration = 100
+	#Cooldown of Mist Veil ability
+	#Range: 20 ~ 1200000
+	halo_mist_veil_cooldown = 400
+	#Duration of Mist Veil ability
+	#Range: 20 ~ 1200000
+	halo_mist_veil_duration = 200
+
+["--Mark Of Cain Settings--"]
+	#Max uses of a Purified Mark of Cain
+	#Range: 1 ~ 10
+	mark_max_uses = 5
+

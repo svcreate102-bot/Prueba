@@ -1,0 +1,524 @@
+
+[vampire]
+	#Controls Sanguinare duration for MCA villagers infected by vampire players.
+	#Range: 20 ~ 24000
+	playerSanguinareDurationTicks = 24000
+	#Controls Sanguinare duration for MCA villagers infected by MCA vampire villagers.
+	#Range: 20 ~ 24000
+	vampireVillagerSanguinareDurationTicks = 12000
+	allowMcaVillagerInfection = true
+	allowChildInfection = false
+	#Range: 20 ~ 72000
+	biteCooldownTicks = 6000
+	#Range: 0.0 ~ 1.0
+	nightAttackChance = 0.18
+	#Chance that a valid vampire bite applies Sanguinare.
+	#Range: 0.0 ~ 1.0
+	conversionChanceOnBite = 0.65
+	#If true, adult MCA vampire villagers use MCA's night schedule: they rest during the day and work at night.
+	vampireVillagersUseNightSchedule = true
+	#If true, MCA vampire villagers seek shade when exposed to daylight.
+	vampireVillagersAvoidSun = true
+	#If true, MCA vampire villagers take sunlight damage when exposed.
+	vampireVillagersBurnInSun = false
+	nonLethalBiteAgainstVillagers = true
+	#Range: 0.0 ~ 40.0
+	villagerBiteDamage = 0.0
+	#Range: 20 ~ 72000
+	recentlyBittenTargetCooldownTicks = 12000
+	bloodDrainStopsCombat = true
+	preventVampiresBitingVampires = true
+	preventVampiresBitingMcaVampires = true
+	showAlreadyVampireBiteMessage = true
+	vampireVillagersInfectHumansAtNight = true
+	vampireVillagersUseNonLethalBiteOnHumans = true
+	#Range: 20 ~ 72000
+	retaliationMemoryTicks = 2400
+	attackOnlyTransformedWerewolves = true
+	#Legacy option retained for existing TOMLs. Player melee attacks are never classified as bites.
+	vampirePlayerBiteDealsDamageToMcaVillagers = false
+	#Range: 0.0 ~ 40.0
+	vampirePlayerBiteDamageToMcaVillagers = 0.0
+	#If true, MCA vampire villagers can be safely cured without replacing their VillagerEntityMCA entity.
+	enableMcaVampireVillagerCure = true
+	#If true, giving milk to an infected, not-yet-converted MCA villager removes Sanguinare and stops conversion.
+	allowMilkToTreatMcaVillagerSanguinare = true
+	milkTreatmentRemovesNegativeEffects = true
+	milkTreatmentConsumesMilk = true
+	milkTreatmentReturnsBucket = true
+	#If true, milk only treats infection before conversion and does not cure converted vampire villagers.
+	milkTreatmentOnlyBeforeConversion = true
+	vampireCureRequiresWeakness = true
+	vampireCureRequiresGoldenApple = true
+	vampireCureRequiresGarlicInjection = true
+	#Weakness 4:00 is 4800 ticks. Direct potion use accepts a valid long weakness potion and saves short progress.
+	#Range: 20 ~ 72000
+	vampireCureRequiredWeaknessDurationTicks = 4800
+	vampireCureAllowAnyWeaknessDuration = false
+	#Range: 20 ~ 72000
+	vampireCureIngredientProgressExpiresTicks = 6000
+	#Range: 20 ~ 72000
+	vampireCureDurationTicks = 3600
+	vampireCureVillagerCannotAttack = true
+	vampireCureVillagerCannotTrade = true
+	vampireCureShowsParticles = true
+	vampireCureAppliesWeaknessDuringProcess = true
+	#Ticks after a completed cure where stale trait/appearance markers cannot restore vampire or werewolf state.
+	#Range: 20 ~ 72000
+	postCureResyncBlockTicks = 400
+	#Range: 0.0 ~ 1.0
+	twoVampireParentsInheritanceChance = 1.0
+	#Range: 0.0 ~ 1.0
+	oneVampireParentInheritanceChance = 0.45
+	#Range: 1.0 ~ 10.0
+	vampireBabyGrowthMultiplier = 1.5
+	#Range: 20 ~ 24000
+	growthProcessIntervalTicks = 1200
+	allowVampireChildrenGrowthBoost = true
+	enablePersistentVampireAppearance = true
+	paleSkinEnabled = true
+	preserveOriginalAppearanceForCure = true
+	#Master toggle for client-side vampire eye visuals on MCA vampire villagers.
+	vampireEyesEnabled = true
+
+[balance]
+	#Release-balanced vampire attribute modifiers. Defaults keep special villagers only lightly stronger than normal MCA villagers.
+	#Range: 1.0 ~ 10.0
+	maxHealthMultiplier = 1.2
+	#Range: 0.0 ~ 100.0
+	attackDamageBonus = 1.0
+	#Range: 0.0 ~ 30.0
+	armorBonus = 2.0
+	#Range: 0.0 ~ 128.0
+	followRangeBonus = 4.0
+	applyCombatAttributesOnlyToAdults = true
+	#Movement speed multipliers affect normal movement. Keep these close to 1.0 so MCA routines such as work/home/follow still feel natural.
+	#Range: 0.05 ~ 3.0
+	vampireVillagerMovementSpeedMultiplier = 1.0
+	#Range: 0.05 ~ 3.0
+	hunterVillagerMovementSpeedMultiplier = 1.0
+	#Range: 0.05 ~ 3.0
+	werewolfVillagerMovementSpeedMultiplier = 1.02
+	#Range: 0.05 ~ 3.0
+	defensiveVillagerMovementSpeedMultiplier = 1.0
+	#Range: 0.05 ~ 1.0
+	curingVillagerMovementSpeedMultiplier = 0.35
+	#Combat movement speeds are used only by special combat/bite goals, not by normal MCA work/home/follow navigation. High values can make villagers look jittery.
+	#Range: 0.1 ~ 3.0
+	specialVillagerMaxNavigationSpeed = 0.75
+	#Range: 0.1 ~ 3.0
+	specialVillagerMeleeGoalSpeed = 0.65
+	#Range: 0.1 ~ 3.0
+	specialVillagerChaseGoalSpeed = 0.7
+	#Range: 5 ~ 72000
+	specialVillagerTargetScanIntervalTicks = 40
+	#Range: 20 ~ 72000
+	specialVillagerRetaliationMemoryTicks = 600
+	#Range: 4 ~ 256
+	specialVillagerMaxChaseDistance = 20
+	#Range: 1 ~ 72000
+	specialVillagerAttackCooldownTicks = 35
+	#Minimum ticks between combat path recalculations. Higher values reduce jitter but make chases less reactive.
+	#Range: 1 ~ 100
+	specialVillagerCombatRepathIntervalTicks = 10
+	#If true, MCA special villagers may automatically target non-MCA faction NPCs/mobs from Vampirism/Werewolves. If false, automatic targeting stays focused on MCA special villagers and enemy players. Retaliation against an NPC attacker is still allowed.
+	specialVillagersTargetFactionNpcs = false
+
+[factions]
+	#Penalty applied to positive social interactions with MCA vampire villagers when the player is human.
+	#Range: 0.0 ~ 1.0
+	humanSocialPenalty = 0.1
+	#Penalty applied to positive social interactions with MCA vampire villagers when the player is a werewolf or transformed werewolf.
+	#Range: 0.0 ~ 1.0
+	werewolfSocialPenalty = 0.25
+	#Penalty applied to positive social interactions with MCA vampire villagers when the player is a hunter.
+	#Range: 0.0 ~ 1.0
+	hunterSocialPenalty = 0.35
+	#If true, transformed werewolves cannot perform romantic or marriage interactions with MCA vampire villagers.
+	blockWerewolfInteractions = true
+	#If true, hunters cannot perform romantic or marriage interactions with MCA vampire villagers.
+	blockHunterInteractions = true
+	#Active. Used by the per-player wrapper trade price calculator. Real villager offers are not permanently modified.
+	#Range: 1.0 ~ 10.0
+	humanTradePriceMultiplier = 1.25
+	#If true, transformed werewolves cannot trade with MCA vampire villagers. If false, they can trade using werewolfTradePriceMultiplier.
+	blockWerewolfTrading = true
+	#If true, hunters cannot trade with MCA vampire villagers. If false, they can trade using hunterTradePriceMultiplier.
+	blockHunterTrading = true
+	vampireVillagersTradeOnlyWithVampires = false
+	#When safe API is unavailable, this is handled by the addon price bridge instead of editing MCA/vanilla reputation.
+	clearVampireBiteReputationPenaltyOnConversion = true
+	neutralizeConversionBitePenaltyForVampires = true
+	#Range: 0.0 ~ 0.95
+	vampirePlayerTradeDiscount = 0.15
+	#Range: 1.0 ~ 10.0
+	hunterTradePriceMultiplier = 2.0
+	#Range: 1.0 ~ 10.0
+	werewolfTradePriceMultiplier = 1.75
+	vampireVillagersTreatVampiresAsAllies = true
+	vampireVillagersTreatHuntersAsEnemies = true
+	vampireVillagersTreatTransformedWerewolvesAsEnemies = true
+	#If true, MCA vampire villager commerce/social logic treats disguised vampire players as HUMAN_DISGUISED.
+	respectVampireDisguiseForMcaInteractions = true
+	#If true, disguised vampire players do not receive the vampire ally trade discount.
+	vampireDisguiseSuppressesVampireTradeDiscount = true
+	#If true, disguised vampire players use the human social penalty for MCA vampire villagers.
+	vampireDisguiseUsesHumanSocialPenalty = true
+	#If true, Vampirism's infect action uses 100% conversion chance for MCA villagers.
+	infectiousBiteOverridesConversionChance = true
+	#If true, Vampirism's infect action uses playerSanguinareDurationTicks for MCA villagers.
+	infectiousBiteStillUsesConfiguredDuration = true
+
+[monster_behavior]
+	#Legacy vampire-specific alias. The active monster-ignore system also has special-villager options below.
+	monstersIgnoreMcaVampireVillagers = true
+	#Legacy vampire-specific alias. The active monster-damage protection also has special-villager options below.
+	cancelMonsterDamageToMcaVampireVillagers = true
+	#Legacy vampire-specific alias. The active panic suppression also has special-villager options below.
+	suppressMcaVampireVillagerZombiePanic = true
+	#If true, suppresses MCA fear/surprised voice reactions for vampire villagers near common monsters.
+	suppressMcaVampireVillagerFearDialogue = true
+	#If true, common hostile monsters ignore MCA vampire, hunter, werewolf and curing villagers. Human MCA villagers remain normal targets.
+	monstersIgnoreSpecialMcaVillagers = true
+	#If true, special MCA villagers clear common monster targets and do not fight/flee as normal humans.
+	specialMcaVillagersIgnoreCommonMonsters = true
+	#If true, MCA vampire/hunter/werewolf/curing villagers suppress MCA panic memories caused by common monsters.
+	suppressSpecialMcaVillagerMonsterPanic = true
+	#If true, suppresses MCA fear/surprised voice reactions for special MCA villagers near common monsters.
+	suppressSpecialMcaVillagerFearDialogue = true
+	#Fallback protection: cancels damage from common hostile monsters to special MCA villagers.
+	cancelMonsterDamageToSpecialMcaVillagers = true
+	#If true, Sanguinare/Lupus infected MCA villagers count as special for monster ignore before conversion. Default false: they still look human.
+	infectedMcaVillagersCountAsSpecialForMonsterIgnore = false
+	#If true, MCA guards that are vampire, hunter, werewolf or defensive villagers may still defend the village against common hostile mobs.
+	specialMcaGuardsDefendAgainstHostileMobs = true
+	#If true, special MCA guards can fight common hostile mobs while panic/flee/surprised behavior remains suppressed.
+	specialMcaGuardsStillSuppressPanic = true
+	#If true, special MCA guards may auto-target creepers. Default false avoids guards chasing creepers into villages.
+	specialMcaGuardsAttackCreepers = false
+
+[advanced]
+	#If true, MCA vampire villagers are protected from being replaced by aggressive villager entities from other mods.
+	preventAggressiveVillagerReplacementForMcaVampires = true
+	#If true, all MCA villagers are protected from aggressive-villager replacement. The addon replaces that dangerous swap with safe defensive mode for human MCA villagers.
+	preventAggressiveVillagerReplacementForAllMcaVillagers = true
+	enableMcaVampireTrait = true
+	enableMcaWerewolfTrait = true
+	syncTraitAndCapabilityOnLoad = true
+	#Migrates the Forge 1.20.1 capability payload from existing MCA villagers on first load.
+	enableLegacy103Migration = true
+	traitCanRestoreCapability = true
+	vampireTraitControlsInheritance = true
+	#Range: 0.0 ~ 1.0
+	oneVampireParentTraitInheritanceChance = 0.45
+	#Range: 0.0 ~ 1.0
+	twoVampireParentsTraitInheritanceChance = 1.0
+
+[hunter]
+	#Master gate for temporary village-defense retaliation.
+	enableMcaVillagerDefenseAgainstVampires = true
+	#If true, non-hunter MCA humans may enter temporary defensive retaliation mode. Default false: vampire threats do not create aggressive/hunter-like villagers.
+	enableTemporaryDefensiveMode = false
+	#If true, temporary defensive/aggressive mode is allowed only inside hunter-controlled villages.
+	defensiveModeOnlyInHunterVillages = true
+	#Range: 1 ~ 128
+	vampireThreatAlertRadius = 32
+	#Range: 20 ~ 72000
+	vampireThreatWindowTicks = 12000
+	#Range: 1 ~ 64
+	vampireThreatCountToTriggerDefense = 2
+	#Range: 20 ~ 72000
+	defensiveModeDurationTicks = 12000
+	defensiveVillagersCanAttackVampirePlayers = true
+	defensiveVillagersCanAttackMcaVampireVillagers = false
+	defensiveVillagersWarnInsteadOfAttackMcaVampires = true
+	defensiveVillagersAttackOnlyIfThreatNearby = true
+	#If true, temporary defensive mode grants the MCA hunter trait. Default false: real hunter trait comes from hunter-controlled villages or manual traits.
+	defensiveModeGrantsHunterTrait = false
+	#If true, temporary defensive mode can visually equip the configured pitchfork/weapon. Default false: only real hunter state equips hunter weapons.
+	defensiveModeUsesPitchfork = false
+	defensiveVillagerWeaponType = "pitchfork"
+	#If true, the addon hunter trait is removed when defensive mode ends.
+	defensiveVillagersHunterTraitIsTemporary = true
+	#If true, defensive MCA villagers are treated as hunter-aligned by this addon. Default false: defensive mode is not real hunter state.
+	defensiveVillagersAreHunterAligned = false
+	#If true, MCA vampire villager AI treats defensive hunter-aligned villagers as hunter-like enemies when the attack configs allow it.
+	defensiveVillagersCountAsHuntersForVampireAI = false
+	hunterVillagersImmuneToVampirism = true
+	hunterVillagersHavePoisonousBlood = true
+	hunterVillagersApplyToxicantToVampireBiters = true
+	#Range: 20 ~ 72000
+	hunterVillagerToxicantDurationTicks = 200
+	#Range: 0 ~ 10
+	hunterVillagerToxicantAmplifier = 0
+	hunterVillagerFallbackToVanillaPoison = true
+	#If true, MCA hunter-aligned villagers resist compat-controlled werewolf infection/conversion.
+	hunterVillagersImmuneToWerewolfTransformation = true
+	#If true, hunter-aligned MCA villagers target revealed vampire players. Disguised vampires remain safe unless hunterVillagersIgnoreVampireDisguise is enabled.
+	hunterVillagersAttackVampirePlayers = true
+	hunterVillagersAttackMcaVampireVillagers = false
+	hunterVillagersAttackTransformedWerewolves = true
+	hunterVillagersAttackVampireMobs = true
+	#If true, hunters only acquire faction targets while defensive, in a hunter village, or retaliating. Default false lets them actively hunt revealed enemies within their normal range.
+	hunterVillagersAttackOnlyWhileDefensive = false
+	hunterVillagersIgnoreVampireDisguise = false
+	#Base melee damage dealt by a hunter villager. Default 2.0 equals one heart before armor, resistance and other damage modifiers.
+	#Range: 0.0 ~ 20.0
+	hunterVillagerAttackDamage = 2.0
+	#Range: 1 ~ 72000
+	hunterVillagerAttackCooldownTicks = 35
+	#Range: 1.0 ~ 128.0
+	hunterVillagerFollowRange = 24.0
+	#If true, hunter-controlled villages grant MCA villagers the addon hunter trait and hunter alignment.
+	hunterVillageControlGrantsHunterTrait = true
+	#If true, MCA hunter villagers are created from hunter-controlled villages, not from generic vampire outbreak aggressive replacement attempts.
+	hunterVillagersOnlyFromHunterControlledVillages = true
+	#If true, hunter trait added by hunter village control is removed when that control is lost.
+	hunterVillagerRemoveTraitWhenVillageControlLost = true
+	#If true, an existing/manual hunter trait is preserved when hunter village control is lost.
+	hunterVillagerKeepManualHunterTrait = true
+	#If true, poisonous hunter blood avoids repeatedly stacking/refreshing Toxicant when an equivalent effect is already active.
+	hunterVillagerAvoidDuplicateToxicant = true
+	#Range: 8 ~ 256
+	hunterVillagerMaxChaseDistanceFromVillage = 32
+	#Range: 8 ~ 256
+	hunterVillagerMaxChaseDistanceFromHome = 24
+	#Range: 20 ~ 72000
+	hunterVillagerRetaliationMemoryTicks = 600
+	hunterVillagerPreferRecentVampireAggressors = true
+	#If true, MCA hunter-aligned villagers trade with hunter players and apply hunterVillagerHunterDiscount.
+	hunterVillagersTradeWithHunters = true
+	#If true, MCA hunter-aligned villagers trade with human or unknown players at human prices.
+	hunterVillagersTradeWithHumans = true
+	#If true, undisguised vampire players are blocked from trading with MCA hunter-aligned villagers.
+	hunterVillagersBlockVampireTrading = true
+	#If true, transformed werewolf players are blocked from trading with MCA hunter-aligned villagers.
+	hunterVillagersBlockTransformedWerewolfTrading = true
+	#Discount given to hunter players. 0.15 means hunter prices are 15 percent cheaper.
+	#Range: 0.0 ~ 0.95
+	hunterVillagerHunterDiscount = 0.15
+	#Range: 0.05 ~ 10.0
+	hunterVillagerHumanPriceMultiplier = 1.0
+	#Range: 0.05 ~ 10.0
+	hunterVillagerVampirePriceMultiplier = 1.75
+	#Range: 0.05 ~ 10.0
+	hunterVillagerWerewolfPriceMultiplier = 1.5
+	#If true, disguised vampire players may trade with MCA hunter-aligned villagers as long as human trading is allowed.
+	hunterVillagerDisguisedVampireCanTrade = true
+	#If true, disguised vampire players use human prices when trading with MCA hunter-aligned villagers.
+	hunterVillagerDisguisedVampireUsesHumanPrices = true
+	#If true, undisguised vampire players cannot perform romantic or marriage actions with MCA hunter-aligned villagers.
+	hunterVillagersBlockVampireRomance = true
+	#If true, transformed werewolf players cannot perform romantic or marriage actions with MCA hunter-aligned villagers.
+	hunterVillagersBlockTransformedWerewolfRomance = true
+	#Range: 0.0 ~ 1.0
+	hunterVillagerVampireSocialPenalty = 0.5
+	#Range: 0.0 ~ 1.0
+	hunterVillagerWerewolfSocialPenalty = 0.25
+	#Range: 0.0 ~ 1.0
+	hunterVillagerHumanSocialPenalty = 0.0
+	#Range: 0.0 ~ 1.0
+	hunterVillagerHunterSocialPenalty = 0.0
+	#If true, disguised vampire players use human social rules with MCA hunter-aligned villagers.
+	hunterVillagerDisguisedVampireUsesHumanSocialRules = true
+	#If true, disguised vampire players may perform romance as humans when human social rules apply.
+	hunterVillagerDisguisedVampireCanRomance = true
+
+[easy_villagers]
+	#If true, this mod may apply vampire/hunter/werewolf faction rules to Easy Villagers surfaces.
+	enableEasyVillagersFactionRules = true
+	#If true, this mod may deny Easy Villagers pickup for MCA villagers from enemy factions. Base capture and restore remain delegated to mca-ev-compat.
+	enableEasyVillagersFactionPickupRules = true
+	#If true, MCA villagers currently being cured cannot be picked up through Easy Villagers.
+	blockPickupOfCuringVillagers = true
+	#If true, human MCA villagers with Sanguinare/Lupus progress can still be picked up when faction rules otherwise allow human pickup.
+	allowPickupOfInfectedHumanVillagers = true
+	#If true, players receive a short action-bar message when faction pickup rules deny pickup.
+	showPickupBlockedMessage = true
+
+[werewolf]
+	#If true, transformed werewolf attacks can apply a compat-controlled Lupus Sanguinem infection to MCA villagers without replacing their entity.
+	allowMcaVillagerWerewolfInfection = true
+	allowMcaChildWerewolfInfection = false
+	#Range: 0.0 ~ 1.0
+	werewolfConversionChanceOnBite = 0.45
+	#Range: 20 ~ 72000
+	werewolfVillagerInfectionDurationTicks = 24000
+	#If true, MCA vampire villagers cannot receive compat-controlled werewolf infection.
+	vampireVillagersImmuneToWerewolfTransformation = true
+	#If true, MCA werewolf villagers cannot receive Sanguinare or become MCA vampires.
+	werewolfVillagersImmuneToVampirism = true
+	#If true, MCA werewolf villagers are not converted into hunter-aligned villagers by village/defensive systems.
+	werewolfVillagersImmuneToHunterConversion = true
+	#Range: 0.0 ~ 1.0
+	oneWerewolfParentInheritanceChance = 0.45
+	#Range: 0.0 ~ 1.0
+	twoWerewolfParentsInheritanceChance = 1.0
+	werewolfVillagerAppearanceEnabled = true
+	werewolfVillagerEarsEnabled = true
+	werewolfVillagerClawsEnabled = true
+	werewolfVillagerAppearanceDebug = false
+	werewolfVillagersTradeWithWerewolves = true
+	werewolfVillagersTradeWithHumans = true
+	werewolfVillagersBlockVampireTrading = true
+	werewolfVillagersBlockHunterTrading = true
+	#Range: 0.0 ~ 0.95
+	werewolfVillagerWerewolfDiscount = 0.15
+	#Range: 0.05 ~ 10.0
+	werewolfVillagerHumanPriceMultiplier = 1.0
+	#Range: 0.05 ~ 10.0
+	werewolfVillagerVampirePriceMultiplier = 1.75
+	#Range: 0.05 ~ 10.0
+	werewolfVillagerHunterPriceMultiplier = 1.5
+	werewolfVillagerDisguisedVampireUsesHumanPrices = true
+	werewolfVillagerDisguisedVampireCanTrade = true
+	werewolfVillagersBlockVampireRomance = true
+	werewolfVillagersBlockHunterRomance = true
+	#Range: 0.0 ~ 1.0
+	werewolfVillagerVampireSocialPenalty = 0.5
+	#Range: 0.0 ~ 1.0
+	werewolfVillagerHunterSocialPenalty = 0.35
+	#Range: 0.0 ~ 1.0
+	werewolfVillagerHumanSocialPenalty = 0.0
+	#Range: 0.0 ~ 1.0
+	werewolfVillagerWerewolfSocialPenalty = 0.0
+	werewolfVillagerDisguisedVampireUsesHumanSocialRules = true
+	werewolfVillagerDisguisedVampireCanRomance = true
+	enableMcaWerewolfVillagerAi = true
+	werewolfVillagersAttackVampirePlayers = true
+	werewolfVillagersAttackHunterPlayers = true
+	werewolfVillagersAttackVampireMobs = true
+	werewolfVillagersAttackHunterNpcs = true
+	werewolfVillagersRespectVampireDisguise = true
+	werewolfVillagersAttackOnlyAtNight = false
+	#Range: 0.0 ~ 20.0
+	werewolfVillagerAttackDamage = 3.0
+	#Range: 1 ~ 72000
+	werewolfVillagerAttackCooldownTicks = 35
+	#Range: 1.0 ~ 128.0
+	werewolfVillagerFollowRange = 24.0
+	#Range: 1.0 ~ 256.0
+	werewolfVillagerMaxChaseDistanceFromHome = 24.0
+	#Range: 20 ~ 72000
+	werewolfVillagerTargetMemoryTicks = 200
+	#If true, MCA werewolf villagers can be cured with Weakness, golden apple and garlic injection.
+	enableMcaWerewolfVillagerCure = true
+	werewolfCureRequiresWeakness = true
+	werewolfCureRequiresGoldenApple = true
+	werewolfCureRequiresGarlicInjection = true
+	#Range: 20 ~ 72000
+	werewolfCureRequiredWeaknessDurationTicks = 4800
+	werewolfCureAllowAnyWeaknessDuration = false
+	#Range: 20 ~ 72000
+	werewolfCureIngredientProgressExpiresTicks = 6000
+	#Range: 20 ~ 72000
+	werewolfCureDurationTicks = 3600
+	werewolfCureVillagerCannotAttack = true
+	werewolfCureVillagerCannotTrade = true
+	werewolfCureShowsParticles = true
+	werewolfCureAppliesWeaknessDuringProcess = true
+
+[village_capture]
+	#If true, Vampirism village capture events classify MCA villagers and apply safe MCA-specific results without replacing entities.
+	enableMcaVillageCaptureIntegration = true
+	#Range: 0.0 ~ 20.0
+	mcaHumanVillagerDefenseStrength = 0.5
+	#Range: 0.0 ~ 20.0
+	mcaHunterVillagerDefenseStrength = 2.0
+	#Range: 0.0 ~ 20.0
+	mcaVampireVillagerVampireStrength = 2.0
+	#Range: 0.0 ~ 20.0
+	mcaInfectedVillagerDefenseStrength = 0.25
+	#Range: 0.0 ~ 20.0
+	mcaCuringVillagerDefenseStrength = 0.0
+	#Range: 0.0 ~ 20.0
+	mcaChildVillagerDefenseStrength = 0.0
+	#Range: 8 ~ 256
+	mcaVillageCaptureStrengthRadius = 48
+	mcaVillageCaptureDebugBreakdown = false
+	#If true, MakeAggressive creates safe MCA hunter state only in hunter-controlled/captured village contexts.
+	makeAggressiveOnlyCreatesMcaHuntersInHunterVillages = true
+	#Vampire village capture can infect MCA humans with Sanguinare, but never grants vampire trait or converts instantly.
+	vampireVillageCaptureInfectsMcaVillagers = true
+	#Range: 0.0 ~ 1.0
+	vampireVillageCaptureInfectionChance = 0.35
+	vampireVillageCaptureInfectsChildren = false
+	vampireVillageCaptureCanInfectHunterVillagers = false
+	vampireVillageCaptureAcceleratesExistingSanguinare = true
+	#Range: 0.05 ~ 10.0
+	vampireVillageCaptureAccelerationMultiplier = 0.5
+	vampireVillageCaptureDoesNotInstantlyConvertMcaVillagers = true
+	#Hunter capture grants hunter state to MCA humans and can cleanse Sanguinare. Converted MCA vampires are not cured by default.
+	hunterVillageCaptureGrantsHunterTrait = true
+	hunterVillageCaptureCuresMcaSanguinare = true
+	hunterVillageCaptureCuresMcaVampires = false
+	hunterVillageCaptureStartsCureForMcaVampires = false
+	#If true, werewolf-aligned MCA villagers resist vampire village capture infection.
+	werewolfVillagersResistVampireCaptureInfection = true
+	#If true, hunter villages do not convert werewolf-aligned MCA villagers to hunters.
+	hunterVillageDoesNotConvertWerewolvesToHunters = true
+
+[mca_commands]
+	#If true, special vampire/hunter/werewolf AI reads MCA movement commands and avoids overriding explicit player orders.
+	respectMcaPlayerCommands = true
+	#If true, special villagers do not start autonomous combat while following a player through MCA commands.
+	suppressAutonomousCombatWhileFollowing = true
+	#If true, special villagers do not start autonomous combat while staying through MCA commands.
+	suppressAutonomousCombatWhileStaying = true
+	#If true, a following special villager may briefly retaliate against a nearby attacker.
+	allowShortRetaliationWhileFollowing = true
+	#If true, a staying special villager may briefly retaliate against a nearby attacker.
+	allowShortRetaliationWhileStaying = false
+	#Range: 0.0 ~ 64.0
+	commandedRetaliationMaxDistance = 4.0
+	#Range: 1 ~ 72000
+	commandedRetaliationTicks = 100
+	clearAutonomousTargetWhenCommanded = true
+	#If true, MCA movement/work/home commands are accepted only from compatible factions.
+	enableFactionCommandRestrictions = true
+	showCommandBlockedMessage = true
+	#If true, vampire/hunter/werewolf players may still command normal human MCA villagers.
+	allowSpecialPlayersCommandHumans = true
+	allowCommandsForInfectedHumans = true
+	allowCommandsForCuringVillagers = false
+	blockUnknownMcaCommandsForEnemyFactions = true
+
+[guide_book]
+	#Gives the Book of Occult Arts once when a player first enters an active vampire, hunter or werewolf-controlled village.
+	giveOccultArtsBookOnSpecialVillageDiscovery = true
+
+[village_missions]
+	#If true, eligible residents of special villages can offer supplies or urgent aid through MCA conversations.
+	enableOccultVillageMissions = true
+	#Minimum time between village requests for the same player and totem. 24000 ticks is one Minecraft day.
+	#Range: 1200 ~ 240000
+	occultVillageMissionCooldownTicks = 24000
+	#Time allowed to finish an accepted village request. 48000 ticks is two Minecraft days. Expired or canceled requests begin a new cooldown.
+	#Range: 1200 ~ 480000
+	occultVillageMissionDeadlineTicks = 48000
+
+[mcaVillageEffects]
+	#If true, vampire fog and compat-owned special-village effects follow the editable MCA village bounds when the totem is inside that village. Vampirism capture, raids and spawning stay native.
+	mcaVillageEffectsFollowMcaBounds = true
+	#Horizontal fog-only margin beyond an MCA village border. 0 ends fog at the final MCA village block; Hunter control, book discovery and outlines remain on the exact MCA border.
+	#Range: 0 ~ 64
+	mcaVillageFogBorderMarginBlocks = 4
+
+[dialogues]
+	#If true, short faction-themed lines accompany existing MCA conversations, faction refusals and cure milestones. These lines never change gameplay outcomes.
+	enableFactionContextualDialogues = true
+
+[gifts]
+	#If true, Vampire, Hunter and Werewolf villagers use their faction-specific gift tastes. Gifts still use MCA's native saturation and relationship rules.
+	enableFactionGiftPreferences = true
+	#If true, Vampire and Werewolf villagers use their faction-specific recovery diets. Humans and Hunters keep MCA's normal recovery food.
+	enableFactionRecoveryDiet = true
+
+[debug]
+	#Enables compact diagnostic logs for trade, faction, bite, state and Easy Villagers integration.
+	enableDebugLogs = false
+	#Very verbose AI target-candidate diagnostics. Normal debug logs still include selected/dropped targets, attacks and retaliation.
+	enableVerboseAiDebugLogs = false
+	#Deep Easy Villagers stored-villager NBT diagnostics. Very verbose; only enable when diagnosing NBT persistence issues.
+	enableVerboseNbtDebugLogs = false
+

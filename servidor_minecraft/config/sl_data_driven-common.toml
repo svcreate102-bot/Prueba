@@ -1,0 +1,18 @@
+
+["SL Data-Driven Extension"]
+	#In the event of a user not being compatible with the system, what method will be used...
+	#
+	#IGNORE: The handshake will be allowed to expel the user in case of an anomaly in the registration table;
+	# in turn, if the registration table is valid, but the user has incorrectly configured values,
+	#  any problem will be allowed to propagate or occur (if occur).
+	#
+	#WARM: The console will show that the user has a non-convergent instance with the instance they are trying to connect to,
+	# and will indicate the name of the user in question and the type of error.
+	#
+	#KICK: The user will be prevented from entering the world, they will be forced to enter a Key,
+	# if the key does not match it is because they have different files than those on the server
+	#  (this only applies to SL Data Driven Extension files)
+	#
+	#Allowed Values: IGNORE, WARM, KICK
+	convergenceFailureHandler = "WARM"
+

@@ -1,0 +1,18 @@
+[19:43:27] [INIT] KubeJS 2001.6.5-build.26; MC 2001 forge
+[19:43:27] [INIT] Loaded plugins:
+[19:43:27] [INIT] - dev.latvian.mods.kubejs.forge.BuiltinKubeJSForgePlugin
+[19:43:27] [INIT] - yesman.epicfight.compat.kubejs.EpicFightKubeJSPlugin
+[19:43:28] [INFO] Loaded script server_scripts:draconic_transformation.js in 0.005 s
+[19:43:28] [INFO] example.js#5: Hello, World! (Loaded server scripts)
+[19:43:28] [INFO] Loaded script server_scripts:example.js in 0.0 s
+[19:43:28] [INFO] Loaded script server_scripts:draconic_amulet_recipe.js in 0.001 s
+[19:43:28] [INFO] Loaded 3/3 KubeJS server scripts in 0.023 s with 0 errors and 0 warnings
+[19:43:28] [INFO] Scripts loaded
+[19:43:28] [INFO] Initializing recipe event...
+[19:43:34] [INFO] Processing recipes...
+[19:43:34] [WARN] Failed to parse recipe 'cataclysm:stonecutting/azure_seastone_brick_stair_from_stonecutting[minecraft:stonecutting]'! Falling back to vanilla: ItemStack 'result' can't be empty!
+[19:43:34] [WARN] Failed to parse recipe 'goety:end/big_end_stone_bricks_stonecutting[minecraft:stonecutting]'! Falling back to vanilla: ItemStack 'result' can't be empty!
+[19:43:34] [INFO] Found 7537 recipes in 160.5 ms
+[19:43:34] [INFO] Posted recipe events in 17.50 ms
+[19:43:34] [INFO] Added 1 recipes, removed 0 recipes, modified 1 recipes, with 0 failed recipes in 132.1 ms
+[19:43:39] [INFO] Server resource reload complete!

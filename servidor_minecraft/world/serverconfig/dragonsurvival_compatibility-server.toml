@@ -1,0 +1,95 @@
+#Enable Upgraded Netherite compatibility
+upgraded_netherite = true
+#Enable Apotheosis compatibility
+apotheosis = true
+#Enable Forbidden and Arcanus compatibility
+forbidden_arcanus = true
+
+["Cold Sweat"]
+	#Enable Cold Sweat Compatibility
+	cold_sweat = true
+
+	["Cold Sweat".CAVE]
+		#Controls the entity's resistance to incoming freezing damage, including that from non-temperature-related sources like powder snow.
+		#Represents the percent of incoming damage to be blocked.
+		#Range: 0.0 ~ 1.0
+		cold_resistance = 0.0
+		#Controls the entity's rate of freezing. Higher values decrease freezing speed, and negative values increase the speed.
+		#Range: -1024.0 ~ 1.0
+		cold_dampening = 0.0
+		#Controls the temperature at which the entity begins to freeze, in MC units.
+		#Range: -1024.0 ~ 1024.0
+		freezing_point = 0.0
+		#Controls the entity's resistance to incoming overheating damage.
+		#Represents the percent of incoming damage to be blocked.
+		#Range: 0.0 ~ 1.0
+		heat_resistance = 1.0
+		#Controls the entity's rate of overheating. Higher values decrease overheating speed, and negative values increase the speed.
+		#Range: -1024.0 ~ 1.0
+		heat_dampening = 0.0
+		#Controls the temperature at which the entity begins to overheat, in MC units.
+		#Range: -1024.0 ~ 1024.0
+		burning_point = 1024.0
+		#Controls the entity's base body temperature, (AKA an offset to the entity's body temperature).
+		#Range: -150.0 ~ 150.0
+		base_temperature = 0.0
+		#Controls the entity's world temperature.
+		#Range: -1024.0 ~ 1024.0
+		world_temperature = 0.0
+
+	["Cold Sweat".SEA]
+		#Controls the entity's resistance to incoming freezing damage, including that from non-temperature-related sources like powder snow.
+		#Represents the percent of incoming damage to be blocked.
+		#Range: 0.0 ~ 1.0
+		cold_resistance = 1.0
+		#Controls the entity's rate of freezing. Higher values decrease freezing speed, and negative values increase the speed.
+		#Range: -1024.0 ~ 1.0
+		cold_dampening = 0.0
+		#Controls the temperature at which the entity begins to freeze, in MC units.
+		#Range: -1024.0 ~ 1024.0
+		freezing_point = -1024.0
+		#Controls the entity's resistance to incoming overheating damage.
+		#Represents the percent of incoming damage to be blocked.
+		#Range: 0.0 ~ 1.0
+		heat_resistance = 0.0
+		#Controls the entity's rate of overheating. Higher values decrease overheating speed, and negative values increase the speed.
+		#Range: -1024.0 ~ 1.0
+		heat_dampening = 0.0
+		#Controls the temperature at which the entity begins to overheat, in MC units.
+		#Range: -1024.0 ~ 1024.0
+		burning_point = 0.0
+		#Controls the entity's base body temperature, (AKA an offset to the entity's body temperature).
+		#Range: -150.0 ~ 150.0
+		base_temperature = 0.0
+		#Controls the entity's world temperature.
+		#Range: -1024.0 ~ 1024.0
+		world_temperature = 0.0
+
+	["Cold Sweat".FOREST]
+		#Controls the entity's resistance to incoming freezing damage, including that from non-temperature-related sources like powder snow.
+		#Represents the percent of incoming damage to be blocked.
+		#Range: 0.0 ~ 1.0
+		cold_resistance = 0.3
+		#Controls the entity's rate of freezing. Higher values decrease freezing speed, and negative values increase the speed.
+		#Range: -1024.0 ~ 1.0
+		cold_dampening = 0.2
+		#Controls the temperature at which the entity begins to freeze, in MC units.
+		#Range: -1024.0 ~ 1024.0
+		freezing_point = 0.0
+		#Controls the entity's resistance to incoming overheating damage.
+		#Represents the percent of incoming damage to be blocked.
+		#Range: 0.0 ~ 1.0
+		heat_resistance = 0.3
+		#Controls the entity's rate of overheating. Higher values decrease overheating speed, and negative values increase the speed.
+		#Range: -1024.0 ~ 1.0
+		heat_dampening = 0.2
+		#Controls the temperature at which the entity begins to overheat, in MC units.
+		#Range: -1024.0 ~ 1024.0
+		burning_point = 0.0
+		#Controls the entity's base body temperature, (AKA an offset to the entity's body temperature).
+		#Range: -150.0 ~ 150.0
+		base_temperature = 0.0
+		#Controls the entity's world temperature.
+		#Range: -1024.0 ~ 1024.0
+		world_temperature = 0.0
+
